@@ -1,0 +1,44 @@
+//homepage social behaviour
+
+.social-behaviour{
+    padding: 60px 0px 60px 0px;
+    .flex-center{
+        @include flex-center();
+    }
+}
+.rectangle {
+    margin: 0px 10px;
+}
+
+//download style
+.home-page-download-block{
+    padding-bottom: 70px;
+    .donwload-image-left{
+        width: 138px;
+        height: 110px;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    .download-title{
+        color: #34363a;
+        font-family: Poppins;
+        font-size: 36px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    .download-button{
+        padding-top: 20px;
+        .blue-btn{
+            border-radius: 25px;
+            border: solid 1px #94d7ed;
+            background-color: #1cabe2;
+            font-family: Poppins;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            color: #fff;
+            padding: 10px 20px;
+            line-height: 20px;
+        }
+    }
+}

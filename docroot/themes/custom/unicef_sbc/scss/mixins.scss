@@ -1,0 +1,133 @@
+@mixin flex($justifyContent:center, $alignItems : center) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+@mixin p_marg () {
+    padding: $zero;
+    margin: $zero;
+}
+@mixin pzero () {
+    padding: $zero;
+}
+@mixin mzero () {
+    margin: $zero;
+}
+@mixin mauto () {
+    margin-right: auto;
+    margin-left: auto;
+}
+@mixin link-font(){
+    font-size: 14px;
+    line-height: 22px;
+}
+@mixin link-border() {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: $zero;
+    width: 0%;
+    left: $zero;
+    transition: all 0.8s ease-out;
+}
+@mixin display() {
+    display: none;
+}
+@mixin display_vertical() {
+    display:inline-block;
+    vertical-align: middle;
+}
+//button styles
+@mixin whitebtn(){
+    border-radius: 25px;
+    border: solid 1px #34363a;
+    background-color: #fff; 
+    padding: 7px 40px;
+    color: #2d2926;
+    line-height: 1.2;
+    font-size: 14px;
+    font-weight: bold;
+}
+@mixin flex-center(){
+    display: flex;
+    align-items: center;
+}
+@mixin lineclamp(){
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+@mixin  downloadbtn() {
+    border-radius: 25px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 20px;
+    line-height: 1.2;
+}
+@mixin fontfamily(){
+    font-family: Poppins;
+    font-weight: bold;
+}
+@mixin fontfamily-lato(){
+    font-family: Lato;
+    font-size: 18px;
+    color: #231f20;
+    line-height: 1.2;
+}
+@mixin title(){
+    color: #34363a;
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.2;
+    padding-bottom: 10px;
+}
+@mixin subtitle(){
+    line-height: 1;
+    color: #231f20;
+    font-family: Roboto;
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+@mixin description(){
+    font-family: Lato;
+    font-size: 18px;
+    color: #231f20;
+    line-height: 1.2;
+}
+@mixin button() {
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 11px 20px;
+    line-height: 1.2;
+}
+@mixin menulist(){
+    line-height: 1.2;
+    color: #231f20;
+    font-family: Roboto;
+    font-size: 15px;
+    display: inline-block;
+    list-style: none;
+    border: 1px solid #1e33f0;
+    padding: 7px 14px;
+    border-radius: 23px;
+}
+@mixin positioncenter(){
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    margin: 0;
+}
+@mixin  bgimage() {
+    background: var(--background) no-repeat center;
+    max-height: 100%;
+    min-height: 100%;
+    background-size: contain;
+    background-position: center center;
+}

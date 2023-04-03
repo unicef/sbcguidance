@@ -1,0 +1,115 @@
+//Footer 
+.featured-bottom{
+    background-color: $blue;
+    padding: 35px 0px;
+    aside.container-fluid{
+        .region-featured-bottom-first{
+           @include mauto();
+            @include flex(space-between, center);
+            @media(max-width:992px){
+                justify-self: center;
+                text-align: center;
+                #block-footerlogo{
+                    padding-bottom: 50px;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            @media(min-width:992px){
+                #block-footerlogo{
+                    .field--name-body{
+                        padding-right: 50px;
+                    }
+                }
+                #block-footersocialshare{
+                    padding-left: 200px;
+                }
+            }
+            
+        }
+        #block-footersocialshare{
+            h2{
+                color: $white;
+                font-size: 16px;
+                font-family: Roboto;
+                font-weight: $font-weight-base;
+                @media(max-width:992px){
+                    padding-bottom: 10px;
+                }
+            }
+            li{
+                margin-right: 10px;
+                &:last-child{
+                    margin-right: 0px;
+                }
+                a{ 
+                    transition: unset;
+                    @include display_vertical();
+                    font-size: $zero;
+                    width: 32px;
+                    height: 32px;
+                    object-fit: $object-fit;
+                    &.facebook {
+                        background: url('/themes/custom/unicef_sbc/images/icons/facebook.png') no-repeat;
+                    }
+                    &.instagram {
+                        background: url('/themes/custom/unicef_sbc/images/icons/instagram.png') no-repeat;
+                    }
+                    &.twitter  {
+                        background: url('/themes/custom/unicef_sbc/images/icons/twitter.png') no-repeat;
+                    }
+                    &.youtube  {
+                        background: url('/themes/custom/unicef_sbc/images/icons/youtube.png') no-repeat;
+                    }
+                    &.mail  {
+                        background: url('/themes/custom/unicef_sbc/images/icons/envelope-logo.png') no-repeat;
+                    }
+                    &.linkedin  {
+                        background: url('/themes/custom/unicef_sbc/images/icons/linkedin.png') no-repeat;
+                    }
+                }
+            }
+            @media(max-width:992px){
+                padding-bottom: 20px;
+                width: 100%;
+                text-align: center;
+                ul.nav{
+                    justify-content: center;
+                }
+            }
+        }
+        @media(max-width:992px){
+            padding: 0px;
+        }
+    }
+}
+footer.site-footer{
+    padding: 5px 0px;
+    background: $blue !important;
+    .region-footer-first{
+        @include flex(space-between, center);
+        color: $white;
+        @include mauto ();
+        @media(max-width:992px){
+           text-align: center;
+           div,nav{
+            width: 100%;
+            text-align: center;
+           }
+        }
+        #block-footer,#block-footeruniceflink{
+            text-align: center;
+        }
+    }
+    p{
+        margin-bottom:$zero;
+    }
+    a,#block-copyrightfooter{
+        color: $white;   
+        font-family: Roboto;
+        font-size: 16px;
+    }
+    @media(max-width:992px){
+        padding: 0px 0px 20px 0px;
+    }
+}

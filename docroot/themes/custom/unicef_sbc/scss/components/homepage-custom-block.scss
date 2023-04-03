@@ -1,0 +1,254 @@
+//homepage social behaviour
+.social-behaviour{
+    padding: 60px 0px 60px 0px;
+    .flex-center{
+        @include flex-center();
+    }
+    .social-behaviour-change-content{
+        .Readmore{
+            a{
+                padding-left: 10px;
+                font-weight: bold;
+                color: #2d2926;
+                font-family: Poppins;
+                padding-right: 6.25rem;
+                &:hover{
+                    text-decoration:none;
+                }
+            }
+        }
+        .modal-body {
+            padding: 40px 40px;
+            .social-text {
+                text-align: justify;
+                text-align: justify;
+                max-height: 300px;
+                overflow-y: scroll;
+                padding-right: 10px;
+            }
+            .btn-close {
+                color: #fff;
+                position: absolute;
+                right: 10px;
+                padding: 6px;
+                top: 10px;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+                background: #002b7a url(/themes/custom/unicef_sbc/images/icons/white-close.png) no-repeat;
+                opacity: 1;
+                &:hover{
+                    opacity: 1; 
+                }
+            }
+        }
+    }
+}
+.rectangle {
+    margin: 0px 10px;
+}
+
+//download style
+.home-page-download-block{
+    padding-bottom: 70px;
+    .donwload-image-left{
+        width: 138px;
+        height: 110px;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    .download-title{
+        @include title();
+    }
+    .download-button{
+        padding-top: 20px;
+        .blue-btn{
+            @include button();
+            border: solid 1px #94d7ed;
+            background-color: #1cabe2;
+            font-family: Poppins;
+            color: #fff;
+           
+        }
+    }
+}
+
+
+//menu-category list
+
+.home-page-category-list{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 50px 0px;
+    background-color: #f7fdff;
+    @media (max-width:767px){
+        margin: 50px auto;
+        padding: 40px 20px;
+    }
+    @media (min-width:768px){
+       width: 100%;
+       max-width: 100%;
+    }
+    .row{
+        flex-wrap: initial;
+        @media (max-width:767px){
+           display: block;
+        }
+        .item-list {
+            padding: 50px 30px 50px 35px;
+            display: block;
+            border-right: solid 0.3px #e4e2e2;
+            @media (max-width:767px){
+                padding: 20px 0px;
+                border-right: 0px;
+                border-bottom: solid 0.3px #e4e2e2;
+                h3{
+                    background: url(/sites/default/files/article-banner/2023-03/accordian-icon-open.png) no-repeat center right;
+                    &.active{
+                        background: url(/sites/default/files/article-banner/2023-03/icon-open.png) no-repeat center right;
+                    }
+                }
+                
+            }
+            &:last-child{
+                border: 0px;
+                padding-right: 0px;
+            }
+            .title{
+                font-family: Poppins;
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 1.2;
+                padding-bottom: 10px;
+                text-transform: uppercase;
+            }
+            .sub-title {
+                line-height: 1.2;
+                color: #231f20;
+                font-family: Roboto;
+                font-size: 16px;
+                padding-bottom: 10px;
+            }
+            ul{
+                padding-left: 0px;
+                @media (max-width:767px){
+                    display: none;
+                }
+                li{
+                    list-style: none;
+                    padding-bottom: 10px;
+                    padding-right: 5px;
+                    display: inline-block;
+                    &:last-child{
+                        padding-right: 0px;
+                    }
+                    a{
+                        @include menulist();
+                        &.Vision-link{
+                            border: solid 1px $text-blue;
+                        }
+                        &.Understand-link{
+                            border: solid 1px $text-green;
+                        }
+                        &.Create-link{
+                            border: solid 1px  $text-orange;
+                        }
+                        &.Do-link{
+                            border: solid 1px $text-dark-blue;
+                        }
+                    }
+                }
+            }
+            .Vision{
+                .title{
+                    color: $text-blue;
+                }
+            }
+            .Understand{
+                .title{
+                    color:$text-green;
+                }
+            }
+            .Create{
+                .title{
+                    color: $text-orange;
+                }
+            }
+            .Do{
+                .title{
+                    color: $text-dark-blue;
+                }
+            }
+        }
+    }
+}
+
+//homepage looking-something-block
+.looking-for-block{
+    padding: 50px 0px;
+    .looking-something-block{
+        .col-md-4.col-lg-3,.col-md-8.col-lg-9{
+            padding-right: calc(var(--bs-gutter-x) * 0.5);
+            padding-left: calc(var(--bs-gutter-x) * 0.5);
+        }
+        .looking-for-box-image {
+            padding-bottom: 20px;
+        }
+        .sub-title {
+            @include subtitle();
+        }
+        .title {
+            @include title();
+        }
+        .desc{
+            p {
+                @include description();
+            }
+        } 
+        .looking-for-list {
+            padding-top: 30px;
+            .looking-for-label {
+                @include description();
+                font-weight: bold;
+                padding-left: 20px;
+                margin-bottom: 10px;
+                border-radius: 35px;
+            }
+            .looking-for-dropdown{
+                width: 50%;
+                @media (max-width:767px) {
+                    width: 100%;
+                }
+                @media screen and (min-width:768px) and (max-width:992px) {
+                    width: 70%;
+                }
+                .looking-for-select {
+                    @include description();
+                    border: solid 1px #1cabe2;
+                    background-color: #f0fbff;
+                    padding: 13px 20px;
+                    border-radius: 25px;
+                    margin-bottom: $zero;
+                    background: url(/sites/default/files/article-thumbnail/2023-03/blue-down-arrow.png) no-repeat center right 17px;
+                }
+                ul.list-name {
+                    border: solid 1px #1cabe2;
+                    background-color: #f0fbff;
+                    padding: 15px 20px;
+                   @include display();
+                    li {
+                        list-style: none;
+                        padding-bottom: 8px;
+                        a{
+                            @include fontfamily-lato();
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width:767px) {
+            text-align: center;
+            .image-none{
+                @include display();
+            }
+        }
+    }
+}

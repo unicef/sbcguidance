@@ -1,0 +1,223 @@
+//slickslider-homepage
+/*
+.article-listing-slider .Vision{
+    background-color: $blue-banner-bg;
+}
+.article-listing-slider .Understand{
+    background-color: $green-banner-bg;
+}
+.article-listing-slider .Create{
+    background-color: $red-banner-bg;
+}
+.article-listing-slider .Do{
+    background-color: $dark-blue-banner-bg;
+} */
+.article-listing-slider{
+    padding: 0px 0px 70px 0px;
+    position: relative;
+    max-width: 92%;
+    margin-left: auto;
+    overflow: hidden;
+    
+    .article-list{
+        .article-card{
+            padding: 20px;
+            margin: 0px 10px;
+            border-radius: 10px;
+            border: solid 1px #979797;
+            background-color: #fff;
+            //new
+            position: relative;
+            z-index: 1;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                border-radius: 9px;
+                height: 100%;
+                transform: scaleY(0);
+                transform-origin: top center;
+                z-index: -1;
+                transition: transform 0.5s;
+            }
+            &:hover::after{
+                transform: scaleY(1);
+            }
+            .article-card-type{
+                font-size: 14px;
+                margin-bottom: 0px;
+                text-align: right;
+                padding-bottom: 20px;
+                color: #2d2926;
+                line-height: 1.2;
+                font-family: Roboto;
+            }
+            .article-card-image
+            {
+                padding: 20px 0px;
+                img{
+                    width: 162px;
+                    height: 121px;
+                    border-radius: 10px;
+                }
+            }
+            .article-card-category {
+                padding: 8px 0px;
+                font-size: 24px;
+                line-height: 1.2;
+                font-family: Poppins;
+                text-transform: uppercase;
+            }
+            .article-card-title {
+                margin-bottom: 0px;
+                padding-bottom: 10px;
+                a {
+                    @include lineclamp();
+                    -webkit-line-clamp: 1;
+                    height: 25px;
+                    color: #34363a;
+                    font-weight: bold;
+                    font-size: 20px;
+                    display: inline-block;
+                    line-height: 24px;
+                    &:hover{
+                        text-decoration: none
+                    }
+                }
+            }
+            .article-card-sub-title {
+                @include lineclamp();
+                -webkit-line-clamp: 2;
+                height: 47px;
+                margin-bottom: 0px;
+                padding-bottom: 10px;
+                line-height: 1.4;
+            }
+            .article-card-button{
+                a{
+                    padding: 7px 20px;   
+                    border: 0;
+                    text-align: center;
+                    color: #2d2926;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    display: inline-block;
+                    text-transform: uppercase;
+                    border-radius: 25px;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        &.Vision{
+            .article-card{
+                &:hover::after{
+                    background: #93d6ec;
+                }
+                &:hover{
+                    .article-card-button{
+                        a{
+                            background-color: #fff;
+                            color: #93d6ec;
+                        }
+                    }
+                }
+                
+            }
+            .article-card-button{
+                a{
+                    background-color: #60c2e6;
+                }
+            }
+        }
+        &.Understand{
+            .article-card{
+                &:hover::after{
+                    background: #2bb373;
+                }
+                &:hover{
+                    .article-card-button{
+                        a{
+                            background-color: #fff;
+                            color: #2bb373;
+                        }
+                    }
+                }
+                
+            }
+            .article-card-button{
+                a{
+                    background-color: #2bb373;
+                }
+            }
+        }
+        &.Create{
+            .article-card{
+                &:hover::after{
+                    background: #f24726;
+                }
+                &:hover{
+                    .article-card-button{
+                        a{
+                            background-color: #fff;
+                            color: #f24726;
+                        }
+                    }
+                }
+                
+            }
+            .article-card-button{
+                a{
+                    background-color: #f24726;
+                }
+            }
+        }
+        &.Do{
+            .article-card{
+                &:hover::after{
+                    background: #8290f0;
+                }
+                &:hover{
+                    .article-card-button{
+                        a{
+                            background-color: #fff;
+                            color: #8290f0;
+                        }
+                    }
+                }
+                
+            }
+            .article-card-button{
+                a{
+                    background-color: #8290f0;
+                }
+            }
+        }
+    }
+     .slick-current{
+        .article-card{
+            box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.17);
+            border: solid 2px #d8d1c9;
+            margin-left: 0px;
+        }
+    }  
+    .slick__arrow{
+        button{
+            border: 1px solid;
+            width: 23px;
+            height: 23px;
+        }
+        position: absolute;
+        top: 0;
+    }
+    .slick-track{
+        padding-top: 45px;
+        padding: 20px 10px;
+    }
+    .slick-list{
+        padding: 20px 16% 0px 0px;
+    }
+}

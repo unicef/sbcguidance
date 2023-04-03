@@ -1,0 +1,19 @@
+/* IMPORTS */
+//@import url(font-awesome.min.css);
+// variables
+@import "variables";
+// typography
+@import "typography";
+// mixins
+@import "mixins";
+//bootstrap
+@import "bootstrap";
+@import "./components/common.scss";
+@import "./components/header-menu.scss";
+@import "./components/homeslider.scss";
+@import "./components/slickslider.scss";
+@import "./components/listing-page.scss";
+@import "./components/progressbar.scss";
+@import "./components/filter.scss";
+@import "./components/homepage-custom-block.scss";
+@import "./components/footer.scss";

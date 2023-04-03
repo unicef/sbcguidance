@@ -1,0 +1,410 @@
+
+
+//Header styles
+.header {
+    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 50%);
+    background-color: $white;
+    padding: 20px $zero;
+    position: relative;
+    @media (max-width:992px) {
+        padding: 13px 0;
+    }
+    .navbar#navbar-top {
+        @include pzero();
+        .region-top-header{
+            @include flex(space-between, center);
+            .navbar-brand{
+               @include p_marg();
+               @media (max-width:992px) {
+                    width: 49%;
+                }
+                @media (min-width:992px) {
+                    flex: 0 0 auto;
+                    width: 33.33333333%;
+                    padding: 0px 30px 0px 0px;
+                }
+            }
+            .block-search{
+                #search-block-form{
+                    border-radius: 22px;
+                    border: solid 1px rgba(0, 0, 0, 0.5);
+                    padding:$zero;
+                    width: 100%;
+                    position: relative;
+                    @media (max-width:992px) {
+                        width: auto;
+                   }
+                    .form-type-search{
+                        margin-bottom: $zero !important;
+                        width: 100%;
+                    }
+                    .form-actions{
+                        margin-bottom: $zero !important;
+                        position: absolute;
+                        right: 2px;
+                        top:2px;
+                        bottom: 2px;
+                    }
+                    .form-control{
+                        width: $width100;
+                        height: 44px;
+                        padding: 7px 20px;
+                        color: $black;
+                        font-size: 14px;
+                        border-radius: 22px;
+                        border: $zero;
+                        box-shadow: $box-shadow;
+                        @media (max-width:992px){
+                            height: 38px;
+                        }
+                    }
+                    
+                }
+                .form-submit{
+                    border-radius: 22px;
+                    padding: 9px 40px 9px 40px;
+                    background-color:$light-blue;
+                    margin-bottom: $zero !important;
+                    border: $zero;
+                    font-family: Lato;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    color: $black;
+                    @media (max-width:992px) {
+                        font-size: 12px;
+                        padding: 8px 18px;
+                    }
+                }
+                @media (max-width:992px) {
+                    margin-left: $zero;
+                    width: 65%;
+                    display: none;
+                }
+                @media screen and (min-width:768px) and (max-width:1200px) {
+                    flex: 0 0 auto;
+                    width: 40%;
+                }
+                @media (min-width:1200px) {
+                    flex: 0 0 auto;
+                    width: 42%;
+                }
+                .container-inline{
+                    display: block;
+                }
+            }
+            #block-topmenu{
+                @media (min-width:992px) {
+                    flex: 0 0 auto;
+                    width: 16.66666667%;
+              }
+            }
+            .nav{
+                justify-content: end;
+                .nav-link{
+                    @include link-font();
+                    color: $black;  
+                    transition: unset;
+                    text-transform: uppercase;
+                    font-family: Roboto;
+                    &.contribute{
+                        &:before{
+                            background: url('/themes/custom/unicef_sbc/images/icons/envelope.png') no-repeat;
+                            width: 23px;
+                            height: 26px;
+                            content: '';
+                            margin-right: 5px;
+                            object-fit: $object-fit;
+                            @include display_vertical();
+                        }
+                    }
+                   a{
+                       color: $black;  
+                   }
+               }
+               @media (max-width:992px) {
+                    @include display();
+               }
+            }
+            .language-switcher-language-url{
+                .links {
+                    span.nav-link{
+                        display: none;
+                        &:first-child{
+                            display: block;
+                            padding: 0;
+                            a{
+                                width: 18px;
+                                font-family: Roboto;
+                                overflow: hidden;
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                            &::before{
+                                background: url('/themes/custom/unicef_sbc/images/icons/globe.png') no-repeat;
+                                width: 19px;
+                                height: 19px;
+                                content: '';
+                                margin-right: 5px;
+                                object-fit: $object-fit;
+                                @include display_vertical();
+                            }
+                            &::after{
+                                background: url('/themes/custom/unicef_sbc/images/icons/arrow_blue.png') no-repeat;
+                                width: 14px;
+                                margin-left: 5px;
+                                height: 11px;
+                                content: '';
+                                object-fit: $object-fit;
+                                @include display_vertical();
+                            }
+                            
+                        }
+                        
+                    }
+                }
+                @media (max-width:992px) {
+                    @include display();
+               }
+               @media screen and (min-width:768px) and (max-width:1200px) {
+                    flex: 0 0 auto;
+                    width: 10%;
+                }
+                @media (min-width:1200px) {
+                    flex: 0 0 auto;
+                    width: 8%;
+               }
+            }
+            
+        }
+    }
+    .navbar-main{
+       padding: 30px 0px 0px 0px;
+       @media (max-width:992px) {
+        position: absolute;
+        top: 100%;
+        padding: $zero;
+        background-color: #002b7a;
+        width: 100%;
+
+        .navbar-toggler{
+            position: absolute;
+            top: -75px;
+            right: 10%;
+            background: #002b7a;
+            padding: $zero;
+            height: 85px;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
+            width: 41px;
+            border-radius: $zero;
+            .navbar-toggler-icon{
+                position: absolute;
+                bottom: 6px;
+                left: 50%;
+                translate: -50% 0%;
+            }
+       }
+    }
+        .collapse {
+            justify-content: space-around !important;
+        }
+        .menu--main{
+            border-right: solid 1px $text-link;
+            border-left: solid 1px $text-link;
+            @media (max-width:992px) {
+                border: 0px;
+                ul{
+                    padding: 10px 0px;
+                    border-top: solid 1px #e4e4e5;
+                    border-bottom: 0px;
+                    margin: 20px 15px;
+                }
+             }
+            ul{
+                @media (min-width:992px) {
+                    padding-left: 0;
+                    margin-bottom: 0;
+                    list-style: none;
+                    display: flex;
+                }
+            }
+            
+            #block-unicef-sbc-main-menu li{
+                border-right: solid 1px $text-link;
+                list-style: none;
+                &:nth-child(5){
+                    border-right: $zero;
+                }
+                @media (max-width:992px) {
+                    border-right: 0px; 
+                }
+                &:nth-child(6){
+                    @media (min-width:992px) {
+                        display: none;
+                    }
+                    @media (max-width:992px) {
+                        border-top: 1px solid #e4e4e5;
+                        border-bottom: 1px solid #e4e4e5;
+                    }
+                }
+                
+                &:last-child{
+                    border-right:$zero;
+                    @media (min-width:992px) {
+                        display: none;
+                    }
+                    @media (max-width:992px) {
+                        color: #fff;
+                        flex-flow: column-reverse;
+                        align-items: center;
+                        text-align: center;
+                        padding: 60px 0px;
+                        display: flex;
+
+                        a.download-all{
+                            border-radius: 25px;
+                            border: solid 0.5px #fff;
+                            color: #fff;
+                            font-family: Poppins;
+                            text-align: center;
+                            line-height: 2;
+                            margin-top: 20px;
+                            padding: 8px 40px;
+                            display: inline-block;
+                            font-size: 16px;
+                            font-weight: bold;
+                        }
+                        .download-all-desc span{
+                            display: block;
+                            &:first-child{
+                                font-family: Poppins;
+                                font-size: 20px;
+                                font-weight: bold;
+                            }
+                            &:last-child{
+                                font-family: Roboto;
+                                font-size: 16px;
+                                font-weight: normal;
+                            }
+                        }
+                    }
+                    
+                }
+                
+                a.nav-link{
+                    color: $black; 
+                    line-height: 23px;
+                    font-size: 15px;
+                    //font-family: Poppins;
+                    position: relative;
+                    margin: 15px 76px;
+                    padding: $zero;
+                    transition: unset;
+                    text-transform: uppercase;
+                    &:before{
+                        @include link-border();
+                        @media (max-width:992px){
+                            background: url('/themes/custom/unicef_sbc/images/icons/arrow-right.png') no-repeat;
+                            bottom: unset;
+                            height: 18px;
+                            right: $zero;
+                            left: unset;
+                            transition: unset;
+                            border: $zero;
+                            width: 16px;
+                            border-bottom: 0px !important;
+                        }
+                        
+                    }
+                    &:hover{
+                        @media (min-width:992px){
+                            font-weight: $weight-bold;
+                        }
+                        //font-family: Poppins;
+                    }
+                    &.vision {
+                        @media (min-width:992px){
+                            &::before{
+                                border-bottom: 3px solid  $text-blue;
+                            }
+                            &:hover{
+                                color: $text-blue;
+                                &::before{
+                                    width: 50%;
+                                    transition: all 0.8s ease-out;
+                                }
+                            }
+                        }
+                    } 
+                    &.understand{
+                        @media (min-width:992px){
+                            &::before{
+                                border-bottom: 3px solid $text-green;
+                            }
+                            &:hover{
+                                color: $text-green;
+                                &::before{
+                                    width: 50%;
+                                    transition: all 0.8s ease-out;
+                                }
+                            } 
+                        }
+                    }
+                    &.create {
+                        @media (min-width:992px){
+                            &::before{
+                                border-bottom: 3px solid $text-orange;
+                            }
+                            &:hover{
+                                color: $text-orange;
+                                &::before{
+                                    width: 50%;
+                                    transition: all 0.8s ease-out;
+                                }
+                            }
+                        }
+                    }
+                    &.do {
+                        @media (min-width:992px){
+                            &::before{
+                                border-bottom: 3px solid $text-dark-blue;
+                            }
+                            &:hover{
+                                color: $text-dark-blue;
+                                &::before{
+                                    width: 50%;
+                                    transition: all 0.8s ease-out;
+                                 }
+                            }
+                        }
+                    }
+                    &.explore {
+                        @media (min-width:992px){
+                            &::before{
+                                border-bottom: 3px solid  $text-blue;
+                            }
+                            &:hover{
+                                color: $text-blue;
+                                &::before{
+                                    width: 50%;
+                                    transition: all 0.8s ease-out;
+                                }
+                            }
+                        }
+                    }
+                    @media screen and (min-width:768px) and (max-width:1200px) {
+                        margin: 15px 70px;
+                    }
+                    @media (max-width:992px) {
+                        color: #fff;
+                        font-size: 16px;
+                        margin: $zero;
+                        padding: 10px 0px 10px 0px;
+                    }
+                    @media (min-width:1200px) {
+                        margin: 15px 85px;
+                    }
+                }   
+            }
+        }
+    }
+}

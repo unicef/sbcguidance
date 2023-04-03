@@ -1,0 +1,134 @@
+
+//Create page  -- Progressbar
+.progressbar-block {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    .progressbar {
+        position: relative;
+        margin: 30px 0px 50px 0px;
+        .progress-text{
+            margin: $zero;
+            padding: $zero;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0px;
+                height: 8px;
+                width: 100%;
+                transform: translate(-0%, -50%);
+                border-radius: 7px;
+                background-color: #f7c7c5;
+            }
+        .step {
+            border-radius: 100%;
+            border: solid 1px #f5002f;
+            background-color: #fff;
+            line-height: 25px;
+            text-align: center;
+            font-family: sans-serif;
+            width: 28px;
+            height: 28px;
+            font-size: 14px;
+            display:flex;
+            justify-content: start;
+            position: relative;
+            z-index: 1;
+                label{
+                    font-size:14px;
+                    color: #2d2926;
+                    margin-top: 25px;
+                    font-family: Poppins;
+                    white-space: nowrap;
+                    padding-left: 0;
+                    line-height: 1.2;
+                }
+                a.progress-link{
+                    display: inline-block;
+                    width: 100%;
+                    position: relative;
+                    z-index: 9999;
+                    padding: 11px;
+                    border-radius: 50%;
+                }
+                &.active{
+                    border-color: #f5002f;
+                    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+                    border: solid 2px #f5002f;
+                    label{
+                        font-weight: bold;
+                        color: #f5002f;
+                        position: absolute;
+                        left: 0;
+                    }
+                    a{
+                        &::after{
+                            content:"•";
+                            transform: translate(-50%, -50%);
+                            position:absolute;
+                            left: 50%;
+                            color: transparent;
+                            top: 50%;
+                            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+                            background-color: #f5002f;
+                            width: 14px;
+                            height: 14px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    .tools-content{
+        padding: 60px 0px 30px 0px;
+        .tools-title{
+            color: #231f20;
+            font-weight: bold;
+            font-family: Poppins;
+            font-size: 25px;
+            padding-bottom: 15px;
+            display: block;
+            line-height: 33px;
+        }
+        .tools-sub-title{
+            @include description();
+            font-family: 'Roboto';
+        }
+    }
+}
+
+//progressbar -- content
+
+.create-page{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    .item-list {
+        padding: 0px 0px 70px 0px;
+        h3{
+            font-family: Poppins;
+            font-size: 25px;
+            color: #2d2926;
+            line-height: 1.2;
+            padding-bottom: 30px;
+        }
+        ul{
+            li{
+                list-style: none;
+            }
+        }
+        .steps{
+            font-family: Poppins;
+            font-size: 18px;
+            font-weight: 900;
+            color: #2d2926;
+            padding-bottom: 8px;
+            line-height: 1.2;
+            display: inline-block;
+        }
+    }
+}

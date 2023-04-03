@@ -1,0 +1,81 @@
+//custom styles
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 14px;
+    line-height: 1.5;
+    background: $white;
+    color: $black;
+    padding: 0px;
+    margin:0px;
+    font-family: Roboto;
+}
+.row > *{
+    flex-shrink: unset;
+    // width: auto;
+    display: block;
+    max-width: none;
+    margin-top: $zero;
+    padding: $zero;
+} 
+.row{ 
+    margin-right: $zero;
+    margin-left: $zero;
+}
+ol, ul {
+    padding-left: 0;
+}
+.navbar > .container, .navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl{
+    display: unset;
+}
+input{
+    padding: 7px 20px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+#main{
+    padding: $zero;
+}
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1{
+    margin-bottom: 0px;
+}
+p{
+    font-size: 16px;
+}
+.node__content{
+    @include p_marg();
+}
+// checkbox
+
+.form-check-input[type=checkbox] {
+    border-radius: 2px;
+}
+.form-check-input:checked {
+    background-color: #1cabe2;
+    border-color: #1cabe2;
+}
+
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    border-color: #1f6ea4;
+    border-radius: 2px;
+    margin-right: 0.625rem;
+    padding: 0;
+}
+
+//scrollbar
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #93d6ec;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #93d6ec;
+    border-radius: 5px;
+}
