@@ -16,6 +16,8 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "drupal/acquia_connector": "^4.0",
+        "drupal/acquia_search": "^3.1",
         "drupal/admin_toolbar": "^3.3",
         "drupal/advagg": "^6.0@alpha",
         "drupal/better_exposed_filters": "^6.0",
